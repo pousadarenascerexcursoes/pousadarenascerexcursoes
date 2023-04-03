@@ -591,14 +591,21 @@ nav.show div.icon-close {
   margin-right: 1.5rem;
 }
 
+.lista-caracteristicas-menu,
 .lista-caracteristicas {
   display: flex;
   gap: 30px;
+  font-size: 17px;
 }
 
+.lista-caracteristicas-menu {
+  color: var(--text-color-light) !important;
+}
+
+.lista-caracteristicas-menu .svg-inline--fa,
 .lista-caracteristicas .svg-inline--fa,
 .tabela-caracteristicas .svg-inline--fa {
-  color: var(--base-color-alt);
+  color: var(--base-color-alt) !important;
 }
 
 /*============== SERVIÇOS ================== */
@@ -617,6 +624,13 @@ nav.show div.icon-close {
 #my-gallery .item-gallery {
   border-radius: 30px;
   margin-bottom: 20px;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.pswp img {
+  object-fit: cover;
 }
 
 .cards.grid {
@@ -1380,6 +1394,7 @@ footer .social a:hover {
   .bg.mobile {
     display: block;
   }
+
   .section {
     padding: calc(0px + var(--header-height)) 0;
   }
@@ -1387,16 +1402,53 @@ footer .social a:hover {
   #inicio .card-content {
     padding: 20px;
   }
+
   #inicio .title {
     text-align: center;
   }
+
+  .lista-caracteristicas-menu,
+  .lista-caracteristicas {
+    font-size: 16px;
+    gap: 20px;
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+
+  .caracteristicas-column {
+    flex-basis: 50%;
+  }
+
+}
+
+@media screen and (max-width: 420px) {
+
+  .lista-caracteristicas-menu,
+  .lista-caracteristicas {
+    font-size: 14px;
+    gap: 10px;
+  }
+
+  .item-menu {
+    font-size: 15px;
+    padding: 14px 10px;
+  }
+
 }
 
 @media screen and (max-width: 370px) {
 
+  .lista-caracteristicas-menu,
+  .lista-caracteristicas {
+    font-size: 12px;
+    gap: 5px;
+  }
+
   .item-menu {
-    padding: 5px 15px;
-    font-size: 14px;
+    font-size: 11px;
+    padding: 8px 7px
   }
 
   .swiper-wrapper {
