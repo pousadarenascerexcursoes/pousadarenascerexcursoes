@@ -924,6 +924,10 @@ nav.show div.icon-close {
 }
 
 /*==============  FOOTER ================== */
+#map {
+  height: 400px;
+  width: 100%;
+}
 footer {
   background: var(--base-color);
 }

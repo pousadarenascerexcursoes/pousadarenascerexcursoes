@@ -72,10 +72,10 @@
             </div>
             <div class="toggle icon-menu">
                 <a class="item-menu title-button-contact"
-                            href="https://api.whatsapp.com/send?phone=+5547991427118&text=Olá! Gostaria de solicitar uma cotação"
-                            target="_blank" aria-label="Solicitar cotação">
-                            <i class="fa-brands fa-whatsapp" style="font-size: 25px;margin-right: 5px;"></i>
-                            Solicitar cotação</a>
+                    href="https://api.whatsapp.com/send?phone=+5547991427118&text=Olá! Gostaria de solicitar uma cotação"
+                    target="_blank" aria-label="Solicitar cotação">
+                    <i class="fa-brands fa-whatsapp" style="font-size: 25px;margin-right: 5px;"></i>
+                    Solicitar cotação</a>
                 <!-- <i class="fa fa-bars" aria-hidden="true"></i> -->
             </div>
             <!-- <div class="toggle icon-menu"><i class="fa fa-bars" aria-hidden="true"></i></div> -->
@@ -106,7 +106,7 @@
                             <span style="color: var(--text-color-light);">Pousada</span> Renascer Excursões
                             </h1>
                             <p style="font-size: 22px; color: var(--text-color-light);">
-                                Aproveite suas férias, feriadão ou final de semana em Itapema, a menos de 500 metros da
+                                Aproveite suas férias, feriadão ou final de semana em Itapema, a menos de 450 metros da
                                 praia!
                             <div class="lista-caracteristicas-menu">
                                 <div class="caracteristicas-column">
@@ -147,7 +147,7 @@
                     <h2 class="title">Sobre nós</h2>
                     <p class="text-justify" style="margin-bottom: 15px;">
                         Excelente opção de hospedagem exclusiva para excursões em Meia Praia, Itapema-SC, a menos de
-                        500m da praia. Com 13 suítes,
+                        450 metros da praia. Com 13 suítes,
                         acomoda confortavelmente até 52 pessoas e oferece cozinha equipada com fogão industrial,
                         geladeira, freezer,
                         forno micro-ondas e a gás, além de refeitório com TV para 52 pessoas. A estadia nesta casa
@@ -235,7 +235,8 @@
                     </p>
                     <p>
                         <a target="_blank" aria-label="Whatsapp Pousada Renascer Excursões" rel="noreferrer"
-                            href="https://api.whatsapp.com/send?phone=+5547991427118&text=Olá! Gostaria de solicitar uma cotação" style="color: var(--text-color);">
+                            href="https://api.whatsapp.com/send?phone=+5547991427118&text=Olá! Gostaria de solicitar uma cotação"
+                            style="color: var(--text-color);">
                             <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> (47) 99142-7118
                         </a>
                     </p>
@@ -257,6 +258,7 @@
         </section>
 
         <div class="dividir-1"></div>
+        <div id="map"></div>
     </main>
 
     <footer class="section">
@@ -316,6 +318,21 @@
     <script async src="./assets/plugins/fontawesome-free-6.3.0-web/js/all.min.js"></script>
 
     <script src="./assets/js/main.js"></script>
+    <script>
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: { lat: -27.12504051465821, lng: -48.60822549347795 },
+                zoom: 16
+            });
+            var marker = new google.maps.Marker({
+                position: { lat: -27.12504051465821, lng: -48.60822549347795 },
+                map: map,
+                title: 'Pousada Renascer Excursões'
+            });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2z-0nCVVi48_yamF05DuYhUlJ1cEuLsI&callback=initMap">
+    </script>
 </body>
 
 </html>
